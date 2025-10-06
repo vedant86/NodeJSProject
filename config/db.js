@@ -3,13 +3,13 @@ require('dotenv').config();
 
 const config = {
     user: process.env.DB_USER,
-    password: process.env.DB_PASS,  // must match SQL login password
-    server: process.env.DB_SERVER,               // or IP/hostname
+    password: process.env.DB_PASS,  
+    server: process.env.DB_SERVER,               
     database: process.env.DB_DATABASE,
-    port: process.env.DB_PORT,                      // fixed TCP port for SQLEXPRESS
+    port: process.env.DB_PORT,                      
     options: {
-      encrypt: false,               // for local dev
-      trustServerCertificate: true, // allow self-signed cert
+      encrypt: false,               
+      trustServerCertificate: true,
       instance: 'NODEPROJECT'
     }
   };
