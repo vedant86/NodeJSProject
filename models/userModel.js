@@ -7,7 +7,7 @@ async function createUser({ name, email }) {
     .request()
     .input('name', sql.NVarChar(255), name)
     .input('email', sql.NVarChar(255), email)
-    .query('INSERT INTO Users (name, email) OUTPUT INSERTED.* VALUES (@name, @email);');
+    .query('INSERT INTO Users (name, email) VALUES (@name, @email);');
 
     return result.recordset[0];
 }
